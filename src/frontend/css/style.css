@@ -1,0 +1,163 @@
+body, textarea, button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.left h1 {
+    margin: 15px 0 15px 0;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.left h2 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+}
+
+.left, .output, .input {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    padding-top: 0;
+    border-right: 1px solid #ccc;
+    background-color: #eee;
+}
+
+#terms-banner {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    left: 30%;
+    padding: 15px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fea;
+    border: 1px solid #dc8;
+    border-radius: 5px;
+}
+
+#terms-banner.hidden {
+    display: none;
+}
+
+#terms-banner button {
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#output {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    width: 75%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.input {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#prompt {
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 5px rgba(96, 96, 96, 0.25);
+    resize: none;
+}
+
+#prompt:focus {
+    outline: none;
+}
+
+.user, .ai {
+    width: fit-content;
+    margin: 10px;
+    white-space: pre-wrap;
+}
+
+.user {
+    margin-left: auto;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.ai {
+    margin-right: auto;
+}
+
+.links {
+    margin: 10px 0 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    body, textarea, button {
+        font-size: 12px;
+    }
+
+    .left {
+        width: 100%;
+        height: 25%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        z-index: 1;
+    }
+
+    .left h1 {
+        margin: 10px 0 10px 0;
+        font-size: 32px;
+    }
+
+    .left h2 {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+    }
+
+    #terms-banner {
+        top: 25%;
+        left: 5%;
+        right: 5%;
+        margin-top: 10px;
+    }
+
+    #output {
+        width: 100%;
+        max-height: 50%;
+    }
+
+    .input {
+        width: 100%;
+        height: 25%;
+    }
+
+    #prompt {
+        width: 90%;
+    }
+}

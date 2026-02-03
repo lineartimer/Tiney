@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>🤖 Tiney</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- python3 -m http.server 8000 --directory frontend -->
+</head>
+<body>
+    <div id="terms-banner">
+        <span>Use of this language model is subject to some simple <a href="terms.html" target="_blank">terms & conditions</a>.</span>
+        <button id="terms">I accept</button>
+    </div>
+    <div class="left">
+        <h1>Tiney</h1>
+        <h2>A conversational LM so small (just 63M parameters) that inference can be run in the browser. Yes, entirely on the client-side, in JavaScript.</h2>
+        <div id="status"></div>        
+    </div>
+    <div id="output"></div>
+    <div class="input">
+        <textarea id="prompt" placeholder="Hi, I'm Tiney. Ask me something." rows="3"></textarea>
+        <div class="links">
+            <a href="https://github.com/lineartimer/Tiney" target="_blank">Repo</a>
+            <a href="terms.html" target="_blank">Terms</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.23.2/dist/ort.min.js"></script>
+    <script src="js/inference.js"></script>
+</body>
+</html>
